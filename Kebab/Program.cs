@@ -44,7 +44,15 @@ namespace Kebab
                     }
                 } while (quantity < 0);
 
-                kebab.ingredients.Add(Ingredient.ingredients[ing], quantity);
+                if (!kebab.ingredients.ContainsKey(Ingredient.ingredients[ing]))
+                {
+                    kebab.ingredients.Add(Ingredient.ingredients[ing], quantity);
+                }
+                else
+                {
+                    kebab.ingredients[Ingredient.ingredients[ing]] = quantity;
+                }
+                
 
                 Console.WriteLine();
                 kebab.Display();
