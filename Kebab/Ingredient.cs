@@ -19,6 +19,7 @@ namespace Kebab
             this.type = type;
         }
 
+
         public static Ingredient viande = new Ingredient("Viande", CARNIVORE);
 
         public static Ingredient poulet = new Ingredient("Poulet", CARNIVORE);
@@ -35,6 +36,28 @@ namespace Kebab
 
         public static Ingredient surimi = new Ingredient("Surimi", PESCETARIEN);
 
+        public static Ingredient blanche = new Ingredient("Sauce Blanche", VEGETARIEN);
+
+        public static Ingredient bechamel = new Ingredient("Sauce Béchamel", VEGETARIEN);
+
+        public static Ingredient algerienne = new Ingredient("Sauce Algérienne", VEGETARIEN);
+
+        public static Ingredient ketchup = new Ingredient("Sauce Ketchup", VEGETARIEN);
+
+        public static Ingredient mayo = new Ingredient("Sauce Mayo", VEGETARIEN);
+
+        public static Ingredient moutarde = new Ingredient("Sauce Moutarde", VEGETARIEN);
+
+        public static Ingredient barbecue = new Ingredient("Sauce Barbecue", VEGETARIEN);
+
+        public static Ingredient samourai = new Ingredient("Sauce Samouraï", VEGETARIEN);
+
+        public static Ingredient cheddar = new Ingredient("Cheddar", VEGETARIEN);
+
+        public static Ingredient raclette = new Ingredient("Raclette", VEGETARIEN);
+
+        public static Ingredient maroille = new Ingredient("Maroille", VEGETARIEN);
+
         public static List<Ingredient> ingredients = new List<Ingredient>()
         {
             viande,
@@ -44,7 +67,18 @@ namespace Kebab
             oignon,
             crevette,
             poisson,
-            surimi
+            surimi,
+            cheddar,
+            raclette,
+            maroille,
+            blanche,
+            bechamel,
+            algerienne,
+            ketchup,
+            mayo,
+            moutarde,
+            barbecue,
+            samourai
         };
 
         public static void Display()
