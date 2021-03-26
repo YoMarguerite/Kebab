@@ -22,5 +22,21 @@ namespace Kebab
         public static Ingredient tomate = new Ingredient("Tomate", true);
 
         public static Ingredient oignon = new Ingredient("Oignon", true);
+
+        public static List<Ingredient> ingredients = new List<Ingredient>()
+        {
+            viande,
+            salade,
+            tomate,
+            oignon
+        };
+
+        public static void Display()
+        {
+            for(int i = 0; i<ingredients.Count; i++)
+            {
+                Console.WriteLine($"{i} - {ingredients[i].nom}");
+            }
+        }
     }
 }
