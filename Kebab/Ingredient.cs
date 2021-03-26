@@ -7,28 +7,44 @@ namespace Kebab
     public class Ingredient
     {
         public string nom;
-        public bool vegetal;
+        public string type;
 
-        public Ingredient(string nom, bool vegetal)
+        public const string CARNIVORE = "Carnivore";
+        public const string VEGETARIEN = "Végétarien";
+        public const string PESCETARIEN = "Pescetarien";
+
+        public Ingredient(string nom, string type)
         {
             this.nom = nom;
-            this.vegetal = vegetal;
+            this.type = type;
         }
 
-        public static Ingredient viande = new Ingredient("Viande", false);
+        public static Ingredient viande = new Ingredient("Viande", CARNIVORE);
 
-        public static Ingredient salade = new Ingredient("Salade", true);
+        public static Ingredient poulet = new Ingredient("Poulet", CARNIVORE);
 
-        public static Ingredient tomate = new Ingredient("Tomate", true);
+        public static Ingredient salade = new Ingredient("Salade", VEGETARIEN);
 
-        public static Ingredient oignon = new Ingredient("Oignon", true);
+        public static Ingredient tomate = new Ingredient("Tomate", VEGETARIEN);
+
+        public static Ingredient oignon = new Ingredient("Oignon", VEGETARIEN);
+
+        public static Ingredient crevette = new Ingredient("Crevette", PESCETARIEN);
+
+        public static Ingredient poisson = new Ingredient("Poisson", PESCETARIEN);
+
+        public static Ingredient surimi = new Ingredient("Surimi", PESCETARIEN);
 
         public static List<Ingredient> ingredients = new List<Ingredient>()
         {
             viande,
+            poulet,
             salade,
             tomate,
-            oignon
+            oignon,
+            crevette,
+            poisson,
+            surimi
         };
 
         public static void Display()

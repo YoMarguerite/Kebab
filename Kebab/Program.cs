@@ -61,14 +61,7 @@ namespace Kebab
             } while (Console.ReadKey().Key == ConsoleKey.Enter);
 
             Console.WriteLine();
-            if (kebab.IsVegetable())
-            {
-                Console.WriteLine("C'est un joli kebab végétarien pour la madame !");
-            }
-            else
-            {
-                Console.WriteLine("C'est un joli kebab cannibale pour le monsieur !");
-            }
+            Console.WriteLine("Ce kébab est " + kebab.IsVegetable());
 
             Console.ReadLine();
             

@@ -8,10 +8,17 @@ namespace Kebab
     {
         public Dictionary<Ingredient, int> ingredients = new Dictionary<Ingredient, int>();
 
-        public bool IsVegetable()
+        public string IsVegetable()
         {
-            var el = ingredients.Where(ing => !ing.Key.vegetal).FirstOrDefault();
-            return el.Key == null;
+            string vegetable = Ingredient.VEGETARIEN;
+            for (int i = 0; i < ingredients.Count; i++)
+            {
+                if (ingredients.ElementAt(i).Key.type == Ingredient.CARNIVORE)
+                    return Ingredient.CARNIVORE;
+                if (ingredients.ElementAt(i).Key.type == Ingredient.PESCETARIEN)
+                    vegetable = Ingredient.PESCETARIEN;
+            }
+            return vegetable;
         }
 
         public void Display()
